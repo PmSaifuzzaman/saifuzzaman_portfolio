@@ -27,10 +27,10 @@ const Navbar = () => {
                 className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "bg-white/60  text-gray-900" : "text-white"
                     }`}
             >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between max-w-7xl mx-auto">
                     <div className="mx-7">
-                        <h4 className="text-4xl uppercase font-bold text-blue-950">
-                            SAIFU<span className="text-cyan-600">ZZ</span>AMAN
+                        <h4 className="text-4xl uppercase font-bold ">
+                            SAIFU<span className="text-cyan-400">ZZ</span>AMAN
                         </h4>
                     </div>
                     <div
