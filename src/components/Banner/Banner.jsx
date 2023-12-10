@@ -1,13 +1,9 @@
 import banner from "../../assets/images/hero.png"
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Banner = () => {
 
-    const social_media = [
-        "logo-instagram",
-        "logo-facebook",
-        "logo-linkedin",
-        "logo-twitter",
-    ];
+    
 
     return (
         <section
@@ -30,15 +26,11 @@ const Banner = () => {
                         MERN Stack Developer
                     </h4>
                     <button className="btn px-5 rounded-full mt-8 bg-cyan-400 text-white">Contact Me</button>
-                    <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-                        {social_media?.map((icon) => (
-                            <div
-                                key={icon}
-                                className="text-gray-600 hover:text-white cursor-pointer "
-                            >
-                                <ion-icon name={icon}></ion-icon>
-                            </div>
-                        ))}
+                    <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5 ">
+                        <FaFacebook className="hover:text-cyan-600 cursor-pointer"></FaFacebook>
+                        <FaInstagram className="hover:text-cyan-600 cursor-pointer"></FaInstagram>
+                        <FaLinkedin className="hover:text-cyan-600 cursor-pointer"></FaLinkedin>
+                        <FaGithub className="hover:text-cyan-600 cursor-pointer"></FaGithub>
                     </div>
                 </div>
             </div>
