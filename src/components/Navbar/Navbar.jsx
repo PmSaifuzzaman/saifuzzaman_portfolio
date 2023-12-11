@@ -11,6 +11,13 @@ const Navbar = () => {
           resumeSection.scrollIntoView({ behavior: "smooth" });
         }
       };
+    const handleContactClick = () => {
+        const contactSection = document.getElementById("contact-section");
+    
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
 
 
@@ -28,7 +35,7 @@ const Navbar = () => {
                         <li><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
                         <li><NavLink>Skills</NavLink></li>
                         <li><NavLink>Projects</NavLink></li>
-                        <li><NavLink>Contacts</NavLink></li>
+                        <li><NavLink onClick={handleContactClick}>Contacts</NavLink></li>
 
                         
                     </ul>
@@ -42,7 +49,7 @@ const Navbar = () => {
                     <li><Link onClick={handleResumeClick}>Resume</Link></li>
                     <li><Link>Skills</Link></li>
                     <li><Link>Projects</Link></li>
-                    <li><Link>Contacts</Link></li>
+                    <li><Link onClick={handleContactClick}>Contacts</Link></li>
 
                     
                 </ul>
