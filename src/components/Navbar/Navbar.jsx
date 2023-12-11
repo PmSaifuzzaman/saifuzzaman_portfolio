@@ -4,6 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
+    const handleAboutClick = () => {
+        const aboutSection = document.getElementById("about-section");
+    
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
     const handleResumeClick = () => {
         const resumeSection = document.getElementById("resume-section");
     
@@ -18,6 +25,20 @@ const Navbar = () => {
             contactSection.scrollIntoView({ behavior: "smooth" });
         }
       };
+    const handleSkillsClick = () => {
+        const skillSection = document.getElementById("skill-section");
+    
+        if (skillSection) {
+            skillSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+    const handleProjectsClick = () => {
+        const projectsSection = document.getElementById("projects-section");
+    
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
 
 
@@ -30,11 +51,11 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
-                        <li><NavLink>Home</NavLink></li>
-                        <li><NavLink>About</NavLink></li>
+                        <li><NavLink to={"/"}>Home</NavLink></li>
+                        <li><NavLink onClick={handleAboutClick}>About</NavLink></li>
                         <li><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
-                        <li><NavLink>Skills</NavLink></li>
-                        <li><NavLink>Projects</NavLink></li>
+                        <li><NavLink onClick={handleSkillsClick}>Skills</NavLink></li>
+                        <li><NavLink onClick={handleProjectsClick}>Projects</NavLink></li>
                         <li><NavLink onClick={handleContactClick}>Contacts</NavLink></li>
 
                         
@@ -44,11 +65,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link>Home</Link></li>
-                    <li><Link>About</Link></li>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link onClick={handleAboutClick}>About</Link></li>
                     <li><Link onClick={handleResumeClick}>Resume</Link></li>
-                    <li><Link>Skills</Link></li>
-                    <li><Link>Projects</Link></li>
+                    <li><Link onClick= {handleSkillsClick}>Skills</Link></li>
+                    <li><Link onClick={handleProjectsClick}>Projects</Link></li>
                     <li><Link onClick={handleContactClick}>Contacts</Link></li>
 
                     

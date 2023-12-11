@@ -10,7 +10,7 @@ const AboutMe = () => {
       ];
 
     return (
-        <section id="about" className="py-10 text-white">
+        <section id="about-section" className="py-10 text-white">
             <div className="text-center mt-8">
                 <h3 className="text-4xl font-semibold">
                     About <span className="text-cyan-600">Me</span>

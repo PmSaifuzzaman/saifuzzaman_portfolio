@@ -61,7 +61,7 @@ const Skill = () => {
     ];
 
     return (
-        <section id="skills" className="py-10 bg-gray-800 relative">
+        <section id="skill-section" className="py-10 bg-gray-800 relative">
             <div className=" text-gray-100 text-center">
                 <h3 className="text-4xl font-semibold">
                     My <span className="text-cyan-600">Skills</span>
