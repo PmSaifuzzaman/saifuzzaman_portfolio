@@ -2,6 +2,7 @@ import AboutMe from "../AboutMe/AboutMe";
 import Banner from "../Banner/Banner";
 import Bot from "../Bot/Bot";
 import ContactMe from "../ContactMe/ContactMe";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import Projects from "../Projects/Projects";
 import Resume from "../Resume/Resume";
@@ -19,6 +20,7 @@ const Home = () => {
             <Skill></Skill>
             <Projects></Projects>
             <ContactMe></ContactMe>
+            <Footer></Footer>
         </div>
     );
 };
