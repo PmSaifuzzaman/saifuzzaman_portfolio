@@ -1,5 +1,6 @@
 import AboutMe from "../AboutMe/AboutMe";
 import Banner from "../Banner/Banner";
+import ContactMe from "../ContactMe/ContactMe";
 import Navbar from "../Navbar/Navbar";
 import Projects from "../Projects/Projects";
 import Resume from "../Resume/Resume";
@@ -15,6 +16,7 @@ const Home = () => {
             <Resume></Resume>
             <Skill></Skill>
             <Projects></Projects>
+            <ContactMe></ContactMe>
         </div>
     );
 };

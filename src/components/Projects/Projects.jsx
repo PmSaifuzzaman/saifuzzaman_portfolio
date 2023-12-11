@@ -1,7 +1,7 @@
 import project1 from "../../assets/projects/blissful.png"
 import project2 from "../../assets/projects/autozone.png"
 import project3 from "../../assets/projects/food.png"
-import project_person from "../../assets/images/project_person1.png"
+import project_person from "../../assets/images/project-removebg-preview.png"
 
 
 
