@@ -1,4 +1,4 @@
-import banner from "../../assets/images/hero.png"
+import banner from "../../assets/images/pathik.png"
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
 
@@ -9,14 +9,22 @@ const Banner = () => {
     const gitHubUrl = "https://github.com/PmSaifuzzaman";
     const stackOverflowUrl = "https://stackoverflow.com/users/23028472/pmsaifuzzaman-pathik";
 
+    const handleContactClick = () => {
+        const contactSection = document.getElementById("contact-section");
+    
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
 
     return (
         <section
             id="home"
             className="min-h-screen flex py-10 md:flex-row flex-col items-center"
         >
-            <div className="flex-1 flex items-center justify-center h-full">
-                <img src={banner} alt="" className="md:w-11/12 h-full object-cover" />
+            <div className="flex-1 flex items-center justify-center ">
+                <img src={banner} alt="" className="w-80 rounded-full" />
             </div>
             <div className="flex-1">
                 <div className="md:text-left text-center">
@@ -25,12 +33,12 @@ const Banner = () => {
                             Hello!
                             <br />
                         </span>
-                        My Name is SAIFU<span className="text-cyan-400">ZZ</span>AMAN
+                         My Name is SAIFU<span className="text-cyan-400">ZZ</span>AMAN
                     </h1>
                     <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
                         MERN Stack Developer
                     </h4>
-                    <button className="btn px-5 rounded-full mt-8 bg-cyan-400 text-white">Contact Me</button>
+                    <button className="btn px-5 rounded-full mt-8 bg-cyan-400 text-white" onClick={handleContactClick}>Contact Me</button>
                     <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5 ">
                         <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer">
                             <FaFacebook />

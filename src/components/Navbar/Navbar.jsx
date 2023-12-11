@@ -1,3 +1,4 @@
+import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
 
@@ -61,7 +62,7 @@ const Navbar = () => {
                         
                     </ul>
                 </div>
-                <Link className="ml-5 text-2xl font-bold">SAIFU<span className="text-cyan-400">ZZ</span>AMAN</Link>
+                <Link className="ml-5 text-2xl font-bold flex items-center gap-1"> <FaLessThan></FaLessThan> SAIFU<span className="text-cyan-400">ZZ</span>AMAN /<FaGreaterThan></FaGreaterThan></Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
