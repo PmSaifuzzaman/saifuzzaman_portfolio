@@ -1,4 +1,4 @@
-import aboutImg from "../../assets/images/about.png"
+import aboutImg from "../../assets/images/About_Saifuzzaman.png"
 
 
 const AboutMe = () => {
@@ -36,16 +36,17 @@ const AboutMe = () => {
                             <br />
                             <br />
                             <a href="../../assets/images/Saifuzzaman_Resume.pdf" download>
-                                <button className="btn px-5 rounded-full mt-8 bg-cyan-400 text-white">Download CV</button>
+                                <button className="btn px-5 rounded-full bg-cyan-400 text-white">Download CV</button>
                             </a>
                         </div>
                     </div>
-                    <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-                        <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-600 -z-10; ">
+                    <div className="flex-1 md:mt-0 flex justify-center items-center">
+                        <div className="lg:w-96 h-full sm:w-10/12  max-w-md ">
+                            <h2 className="mb-1">About_Saifuzzaman.json</h2>
                             <img
                                 src={aboutImg}
                                 alt=""
-                                className="w-full object-cover bg-cyan-600 rounded-xl"
+                                className="w-full object-cover rounded-xl"
                             />
                         </div>
                     </div>

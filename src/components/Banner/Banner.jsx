@@ -1,5 +1,5 @@
 import banner from "../../assets/images/hero.png"
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
 const Banner = () => {
 
@@ -31,6 +31,7 @@ const Banner = () => {
                         <FaInstagram className="hover:text-cyan-600 cursor-pointer"></FaInstagram>
                         <FaLinkedin className="hover:text-cyan-600 cursor-pointer"></FaLinkedin>
                         <FaGithub className="hover:text-cyan-600 cursor-pointer"></FaGithub>
+                        <FaStackOverflow className="hover:text-cyan-600 cursor-pointer"></FaStackOverflow>
                     </div>
                 </div>
             </div>

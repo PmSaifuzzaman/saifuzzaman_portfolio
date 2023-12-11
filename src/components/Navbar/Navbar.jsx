@@ -1,76 +1,42 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
 
 
 const Navbar = () => {
 
-    const [sticky, setSticky] = useState(false);
-    const [open, setOpen] = useState(false);
-    const menuLinks = [
-        { name: "HOME", link: "#home" },
-        { name: "ABOUT", link: "#about" },
-        { name: "SKILLS", link: "#skills" },
-        { name: "PROJECTS", link: "#projects" },
-        { name: "CONTACT", link: "#contact" },
-    ];
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            const nav = document.querySelector("nav");
-            console.log(nav)
-            window.scrollY > 0 ? setSticky(true) : setSticky(false);
-        });
-    }, []);
 
     return (
-        <div>
-            <nav
-                className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "bg-white/60  text-gray-900" : "text-white"
-                    }`}
-            >
-                <div className="flex items-center justify-between max-w-7xl mx-auto">
-                    <div className="mx-7">
-                        <h4 className="text-4xl uppercase font-bold ">
-                            SAIFU<span className="text-cyan-400">ZZ</span>AMAN
-                        </h4>
+        <div className="navbar bg-gray-500">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <div
-                        className={` ${sticky ? "md:bg-white/0 bg-white" : "bg-white"
-                            } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
-                    >
-                        <ul className="flex items-center gap-1 py-2 text-lg">
-                            {menuLinks?.map((menu, i) => (
-                                <li key={i} className="px-6 hover:text-cyan-600">
-                                    <a href={menu?.link}>{menu?.name}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div
-                        onClick={() => setOpen(!open)}
-                        className={`z-[999]  ${open ? "text-gray-900" : "text-gray-100"
-                            } text-3xl md:hidden m-5`}
-                    >
-                        <ion-icon name="menu"></ion-icon>
-                    </div>
-                    <div
-                        className={`md:hidden text-gray-900 absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-white top-0 duration-300 ${open ? "right-0" : "right-[-100%]"
-                            }`}
-                    >
-                        <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
-                            {menuLinks?.map((menu, i) => (
-                                <li
-                                    onClick={() => setOpen(false)}
-                                    key={i}
-                                    className="px-6 hover:text-cyan-600"
-                                >
-                                    <a href={menu?.link}>{menu?.name}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
+                        <li><NavLink>Home</NavLink></li>
+                        <li><NavLink>About</NavLink></li>
+                        <li><NavLink>Resume</NavLink></li>
+                        <li><NavLink>Skills</NavLink></li>
+                        <li><NavLink>Projects</NavLink></li>
+                        <li><NavLink>Contacts</NavLink></li>
+
+                        
+                    </ul>
                 </div>
-            </nav>
+                <Link className="ml-5 text-2xl font-bold">SAIFU<span className="text-cyan-400">ZZ</span>AMAN</Link>
+            </div>
+            <div className="navbar-end hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    <li><Link>Home</Link></li>
+                    <li><Link>About</Link></li>
+                    <li><Link>Resume</Link></li>
+                    <li><Link>Skills</Link></li>
+                    <li><Link>Projects</Link></li>
+                    <li><Link>Contacts</Link></li>
+
+                    
+                </ul>
+            </div>
         </div>
     );
 };

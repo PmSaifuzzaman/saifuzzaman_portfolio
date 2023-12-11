@@ -1,6 +1,7 @@
 import AboutMe from "../AboutMe/AboutMe";
 import Banner from "../Banner/Banner";
 import Navbar from "../Navbar/Navbar";
+import Skill from "../Skill/Skill";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <AboutMe></AboutMe>
+            <Skill></Skill>
         </div>
     );
 };
