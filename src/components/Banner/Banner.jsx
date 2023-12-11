@@ -1,9 +1,14 @@
 import banner from "../../assets/images/hero.png"
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
-const Banner = () => {
 
-    
+const Banner = () => {
+    const facebookUrl = "https://www.facebook.com/pathik7610ice";
+    const instagramUrl = "https://www.instagram.com/pmsaifuzzaman/";
+    const linkedinUrl = "https://www.linkedin.com/in/saifuzzaman-pathik-61441217b/";
+    const gitHubUrl = "https://github.com/PmSaifuzzaman";
+    const stackOverflowUrl = "https://stackoverflow.com/users/23028472/pmsaifuzzaman-pathik";
+
 
     return (
         <section
@@ -27,11 +32,15 @@ const Banner = () => {
                     </h4>
                     <button className="btn px-5 rounded-full mt-8 bg-cyan-400 text-white">Contact Me</button>
                     <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5 ">
-                        <FaFacebook className="hover:text-cyan-600 cursor-pointer"></FaFacebook>
-                        <FaInstagram className="hover:text-cyan-600 cursor-pointer"></FaInstagram>
-                        <FaLinkedin className="hover:text-cyan-600 cursor-pointer"></FaLinkedin>
-                        <FaGithub className="hover:text-cyan-600 cursor-pointer"></FaGithub>
-                        <FaStackOverflow className="hover:text-cyan-600 cursor-pointer"></FaStackOverflow>
+                        <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer">
+                            <FaFacebook />
+                        </a>
+                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaInstagram /></a>
+                        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaLinkedin /></a>
+                        <a href={gitHubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaGithub /></a>
+                        <a href={stackOverflowUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaStackOverflow /></a>
+                        
+                        
                     </div>
                 </div>
             </div>
