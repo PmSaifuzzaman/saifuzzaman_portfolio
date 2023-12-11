@@ -10,7 +10,7 @@ const AboutMe = () => {
       ];
 
     return (
-        <section id="about-section" className="py-10 text-white">
+        <section id="about" className="py-10 text-white">
             <div className="text-center mt-8">
                 <h3 className="text-4xl font-semibold">
                     About <span className="text-cyan-600">Me</span>
@@ -41,7 +41,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="flex-1 md:mt-0 flex justify-center items-center">
-                        <div className="lg:w-96 h-full sm:w-10/12  max-w-md ">
+                        <div className="lg:w-[600px] h-full sm:w-10/12  max-w-md ">
                             <h2 className="mb-1">About_Saifuzzaman.json</h2>
                             <img
                                 src={aboutImg}

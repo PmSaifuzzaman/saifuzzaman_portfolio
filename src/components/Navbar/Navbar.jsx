@@ -1,4 +1,4 @@
-import { FaGreaterThan, FaLessThan } from "react-icons/fa";
+// import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
 
@@ -7,39 +7,39 @@ const Navbar = () => {
 
     const handleAboutClick = () => {
         const aboutSection = document.getElementById("about-section");
-    
+
         if (aboutSection) {
             aboutSection.scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
     const handleResumeClick = () => {
         const resumeSection = document.getElementById("resume-section");
-    
+
         if (resumeSection) {
-          resumeSection.scrollIntoView({ behavior: "smooth" });
+            resumeSection.scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
     const handleContactClick = () => {
         const contactSection = document.getElementById("contact-section");
-    
+
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
     const handleSkillsClick = () => {
         const skillSection = document.getElementById("skill-section");
-    
+
         if (skillSection) {
             skillSection.scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
     const handleProjectsClick = () => {
         const projectsSection = document.getElementById("projects-section");
-    
+
         if (projectsSection) {
             projectsSection.scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
 
 
 
@@ -59,21 +59,21 @@ const Navbar = () => {
                         <li><NavLink onClick={handleProjectsClick}>Projects</NavLink></li>
                         <li><NavLink onClick={handleContactClick}>Contacts</NavLink></li>
 
-                        
+
                     </ul>
                 </div>
-                <Link className="ml-5 text-2xl font-bold flex items-center gap-1"> <FaLessThan></FaLessThan> SAIFU<span className="text-cyan-400">ZZ</span>AMAN /<FaGreaterThan></FaGreaterThan></Link>
+                <Link className="ml-5 text-2xl font-bold">  SAIFU<span className="text-cyan-400">ZZ</span>AMAN </Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to={"/"}>Home</Link></li>
                     <li><Link onClick={handleAboutClick}>About</Link></li>
                     <li><Link onClick={handleResumeClick}>Resume</Link></li>
-                    <li><Link onClick= {handleSkillsClick}>Skills</Link></li>
+                    <li><Link onClick={handleSkillsClick}>Skills</Link></li>
                     <li><Link onClick={handleProjectsClick}>Projects</Link></li>
                     <li><Link onClick={handleContactClick}>Contacts</Link></li>
 
-                    
+
                 </ul>
             </div>
         </div>
