@@ -4,7 +4,7 @@ import { FaGraduationCap } from "react-icons/fa";
 const Resume = () => {
     return (
         <>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8" id="resume-section">
                 <h2 className="text-4xl font-semibold">My <span className="text-cyan-400">Resume</span></h2>
                 <p className="text-gray-400 mt-3 text-lg">A Summary of my Academic Journey</p>
             </div>

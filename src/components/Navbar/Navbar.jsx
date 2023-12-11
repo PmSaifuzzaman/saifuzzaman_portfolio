@@ -4,6 +4,16 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
+    const handleResumeClick = () => {
+        const resumeSection = document.getElementById("resume-section");
+    
+        if (resumeSection) {
+          resumeSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+
+
 
     return (
         <div className="navbar bg-gray-500">
@@ -15,7 +25,7 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
                         <li><NavLink>Home</NavLink></li>
                         <li><NavLink>About</NavLink></li>
-                        <li><NavLink>Resume</NavLink></li>
+                        <li><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
                         <li><NavLink>Skills</NavLink></li>
                         <li><NavLink>Projects</NavLink></li>
                         <li><NavLink>Contacts</NavLink></li>
@@ -29,7 +39,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link>Home</Link></li>
                     <li><Link>About</Link></li>
-                    <li><Link>Resume</Link></li>
+                    <li><Link onClick={handleResumeClick}>Resume</Link></li>
                     <li><Link>Skills</Link></li>
                     <li><Link>Projects</Link></li>
                     <li><Link>Contacts</Link></li>
