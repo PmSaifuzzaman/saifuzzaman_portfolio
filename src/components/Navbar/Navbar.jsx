@@ -1,9 +1,12 @@
 // import { FaGreaterThan, FaLessThan } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 
 
 const Navbar = () => {
+
+    const [isSticky, setSticky] = useState(false);
 
     const handleAboutClick = () => {
         const aboutSection = document.getElementById("about-section");
@@ -41,11 +44,25 @@ const Navbar = () => {
         }
     };
 
+    // Sticky navbar code
+
+    useEffect(() => {
+        const handleScroll = () => {
+          setSticky(window.scrollY > 0);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        
+        // Cleanup the event listener on component unmount
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
 
 
     return (
-        <div className="navbar bg-gray-500">
+        <div className={`navbar ${isSticky ? 'sticky fixed z-10 top-0 bg-gray-800' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
