@@ -1,15 +1,15 @@
 import project1 from "../../assets/projects/blissful.png"
 import project2 from "../../assets/projects/autozone.png"
 import project3 from "../../assets/projects/food.png"
+import project4 from "../../assets/projects/event.png"
 import project_person from "../../assets/images/project-removebg-preview.png"
-
-
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-// import { Pagination,autoplay } from "swiper";
 
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import {  Pagination } from 'swiper/modules';
 
 
 const Projects = () => {
@@ -20,6 +20,7 @@ const Projects = () => {
             name: "MERN Stack BlissfullMatch Matrimony Website",
             github_link: "https://github.com/PmSaifuzzaman/blissfulMatch-clientside",
             live_link: "https://blissfulmatch-31a41.web.app/",
+            // technology_used: "React, Tailwind CSS, Material UI, Axios, Axios Interceptors, TanStack Query v5, React hook Form, Swiper React"
         },
         {
             img: project2,
@@ -33,13 +34,12 @@ const Projects = () => {
             github_link: "https://github.com/PmSaifuzzaman/food-sharing-community-clientside",
             live_link: "https://food-sharing-community.web.app/",
         },
-        // {
-        //   img: project4,
-        //   name: "React Nav",
-        //   github_link:
-        //     "https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
-        //   live_link: "https://reacttailwindnavbar.netlify.app",
-        // },
+        {
+          img: project4,
+          name: "React-Event-Management-Agency-Website",
+          github_link: "https://github.com/PmSaifuzzaman/react-event-management-agency",
+          live_link: "https://react-event-management-agency.web.app/",
+        },
         // {
         //   img: project5,
         //   name: "Vue Country",
@@ -60,6 +60,7 @@ const Projects = () => {
             <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
                 <div className="lg:w-2/3 w-full">
                     <Swiper
+                        modules={[Pagination]}
                         slidesPerview={1.2}
                         spaceBetween={20}
                         breakpoints={{
@@ -74,13 +75,14 @@ const Projects = () => {
                         pagination={{
                             clickable: true,
                         }}
-                    // modules={[Pagination, Autoplay]}
+                    
                     >
                         {projects.map((project_info, i) => (
                             <SwiperSlide key={i}>
-                                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
+                                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl mb-10">
                                     <img src={project_info.img} alt="" className="rounded-lg" />
                                     <h3 className="text-xl my-4">{project_info.name}</h3>
+                                    {/* <div className="badge">{project_info.technology_used}</div> */}
                                     <div className="flex gap-3">
                                         <a
                                             href={project_info.github_link}

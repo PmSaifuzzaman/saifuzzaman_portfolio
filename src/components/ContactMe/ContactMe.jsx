@@ -13,8 +13,8 @@ const ContactMe = () => {
     ];
 
     return (
-        <section id="contact-section" className="py-10 px-3 text-white">
-            <div className="text-center mt-8">
+        <section id="contact-section" className="py-5 px-3 text-white">
+            <div className="text-center">
                 <h3 className="text-4xl font-semibold">
                     Contact <span className="text-cyan-600">Me</span>
                 </h3>

@@ -22,7 +22,7 @@ const AboutMe = () => {
                             <p className="text-justify leading-7 w-11/12 mx-auto">
                             Hi, I am Saifuzzaman. Right now, I am a front-end developer using the MERN stack, with an emphasis on React. I aspire to work as a full-stack developer. With the goal of advancing my career and having a positive influence on full-stack web development, I want to tackle difficult projects that will test my skills and expertise.
                             </p>
-                            <div className="flex mt-10 items-center gap-7">
+                            <div className="flex ml-5 mt-10 items-center gap-7">
                                 {info.map((content) => (
                                     <div key={content.text}>
                                         <h3 className="md:text-4xl text-2xl font-semibold text-white">

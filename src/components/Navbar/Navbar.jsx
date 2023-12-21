@@ -48,16 +48,16 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-          setSticky(window.scrollY > 0);
+            setSticky(window.scrollY > 0);
         };
-    
+
         window.addEventListener('scroll', handleScroll);
-        
+
         // Cleanup the event listener on component unmount
         return () => {
-          window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+    }, []);
 
 
 
@@ -68,13 +68,13 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
-                        <li><NavLink to={"/"}>Home</NavLink></li>
-                        <li><NavLink onClick={handleAboutClick}>About</NavLink></li>
-                        <li><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
-                        <li><NavLink onClick={handleSkillsClick}>Skills</NavLink></li>
-                        <li><NavLink onClick={handleProjectsClick}>Projects</NavLink></li>
-                        <li><NavLink onClick={handleContactClick}>Contacts</NavLink></li>
+                    <ul tabIndex={0} className="flex flex-col text-gray-800 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
+                        <li className="hover:text-cyan-400"><NavLink to={"/"}>Home</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleAboutClick}>About</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleSkillsClick}>Skills</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleProjectsClick}>Projects</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleContactClick}>Contacts</NavLink></li>
 
 
                     </ul>
@@ -82,13 +82,14 @@ const Navbar = () => {
                 <Link className="ml-5 text-2xl font-bold">  SAIFU<span className="text-cyan-400">ZZ</span>AMAN </Link>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><Link to={"/"}>Home</Link></li>
-                    <li><Link onClick={handleAboutClick}>About</Link></li>
-                    <li><Link onClick={handleResumeClick}>Resume</Link></li>
-                    <li><Link onClick={handleSkillsClick}>Skills</Link></li>
-                    <li><Link onClick={handleProjectsClick}>Projects</Link></li>
-                    <li><Link onClick={handleContactClick}>Contacts</Link></li>
+                <ul className="flex gap-7 items-center pr-10 px-1 ">
+
+                    <li className="hover:text-cyan-400"><Link to={"/"}>Home</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleAboutClick}>About</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleResumeClick}>Resume</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleSkillsClick}>Skills</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleProjectsClick}>Projects</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleContactClick}>Contacts</Link></li>
 
 
                 </ul>
