@@ -47,8 +47,6 @@ const Banner = () => {
                         <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaLinkedin /></a>
                         <a href={gitHubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaGithub /></a>
                         <a href={stackOverflowUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-600 cursor-pointer"><FaStackOverflow /></a>
-                        
-                        
                     </div>
                 </div>
             </div>
