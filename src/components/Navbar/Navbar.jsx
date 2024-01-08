@@ -8,6 +8,13 @@ const Navbar = () => {
 
     const [isSticky, setSticky] = useState(false);
 
+    const handleHomeClick = () => {
+        const bannerSection = document.getElementById("banner-section");
+
+        if (bannerSection) {
+            bannerSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     const handleAboutClick = () => {
         const aboutSection = document.getElementById("about-section");
 
@@ -69,7 +76,7 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="flex flex-col text-gray-800 sm:bg-white dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2">
-                        <li className="hover:text-cyan-400"><NavLink to={"/"}>Home</NavLink></li>
+                        <li className="hover:text-cyan-400"><NavLink onClick={handleHomeClick}>Home</NavLink></li>
                         <li className="hover:text-cyan-400"><NavLink onClick={handleAboutClick}>About</NavLink></li>
                         <li className="hover:text-cyan-400"><NavLink onClick={handleResumeClick}>Resume</NavLink></li>
                         <li className="hover:text-cyan-400"><NavLink onClick={handleSkillsClick}>Skills</NavLink></li>
@@ -84,7 +91,7 @@ const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="flex gap-7 items-center pr-10 px-1 ">
 
-                    <li className="hover:text-cyan-400"><Link to={"/"}>Home</Link></li>
+                    <li className="hover:text-cyan-400"><Link onClick={handleHomeClick}>Home</Link></li>
                     <li className="hover:text-cyan-400"><Link onClick={handleAboutClick}>About</Link></li>
                     <li className="hover:text-cyan-400"><Link onClick={handleResumeClick}>Resume</Link></li>
                     <li className="hover:text-cyan-400"><Link onClick={handleSkillsClick}>Skills</Link></li>

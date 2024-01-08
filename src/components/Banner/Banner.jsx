@@ -20,7 +20,8 @@ const Banner = () => {
 
     return (
         <section
-            id="home"
+            // id="home"
+            id="banner-section"
             className="min-h-screen flex md:flex-row flex-col items-center"
         >
             <div className="flex-1 flex items-center justify-center ">
