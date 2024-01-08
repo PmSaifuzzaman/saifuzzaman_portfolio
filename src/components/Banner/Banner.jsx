@@ -21,7 +21,7 @@ const Banner = () => {
     return (
         <section
             id="home"
-            className="min-h-screen flex py-10 md:flex-row flex-col items-center"
+            className="min-h-screen flex md:flex-row flex-col items-center"
         >
             <div className="flex-1 flex items-center justify-center ">
                 <img src={banner} alt="" className="w-80 rounded-full" />
